@@ -80,12 +80,15 @@ def run(rank, n_gpus, hps):
         batch_size=hps.train.batch_size, pin_memory=True,
         drop_last=False, collate_fn=collate_fn)
 
+  # 生成器
   net_g = SynthesizerTrn(
       len(symbols),
       hps.data.filter_length // 2 + 1,
       hps.train.segment_size // hps.data.hop_length,
       **hps.model).cuda(rank)
+  # 判别器
   net_d = MultiPeriodDiscriminator(hps.model.use_spectral_norm).cuda(rank)
+  # 对应的优化器
   optim_g = torch.optim.AdamW(
       net_g.parameters(), 
       hps.train.learning_rate, 
@@ -96,6 +99,7 @@ def run(rank, n_gpus, hps):
       hps.train.learning_rate, 
       betas=hps.train.betas, 
       eps=hps.train.eps)
+  # 分布式数据并行（Distributed Data Parallel）
   net_g = DDP(net_g, device_ids=[rank])
   net_d = DDP(net_d, device_ids=[rank])
 
@@ -122,6 +126,7 @@ def run(rank, n_gpus, hps):
 
 
 def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loaders, logger, writers):
+  # 传参
   net_g, net_d = nets
   optim_g, optim_d = optims
   scheduler_g, scheduler_d = schedulers
@@ -135,14 +140,18 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
   net_g.train()
   net_d.train()
   for batch_idx, (x, x_lengths, spec, spec_lengths, y, y_lengths) in enumerate(train_loader):
+    # 将数据移动到cuda上
     x, x_lengths = x.cuda(rank, non_blocking=True), x_lengths.cuda(rank, non_blocking=True)
     spec, spec_lengths = spec.cuda(rank, non_blocking=True), spec_lengths.cuda(rank, non_blocking=True)
     y, y_lengths = y.cuda(rank, non_blocking=True), y_lengths.cuda(rank, non_blocking=True)
 
+    # 控制混合精度训练
     with autocast(enabled=hps.train.fp16_run):
+      # 文本到语音生成
       y_hat, l_length, attn, ids_slice, x_mask, z_mask,\
       (z, z_p, m_p, logs_p, m_q, logs_q) = net_g(x, x_lengths, spec, spec_lengths)
 
+      # y和y hat都转换为mel
       mel = spec_to_mel_torch(
           spec, 
           hps.data.filter_length, 
@@ -165,10 +174,12 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
       y = commons.slice_segments(y, ids_slice * hps.data.hop_length, hps.train.segment_size) # slice 
 
       # Discriminator
+      # GAN的体现
       y_d_hat_r, y_d_hat_g, _, _ = net_d(y, y_hat.detach())
       with autocast(enabled=False):
         loss_disc, losses_disc_r, losses_disc_g = discriminator_loss(y_d_hat_r, y_d_hat_g)
         loss_disc_all = loss_disc
+    # 训练判别器
     optim_d.zero_grad()
     scaler.scale(loss_disc_all).backward()
     scaler.unscale_(optim_d)
@@ -186,12 +197,16 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
         loss_fm = feature_loss(fmap_r, fmap_g)
         loss_gen, losses_gen = generator_loss(y_d_hat_g)
         loss_gen_all = loss_gen + loss_fm + loss_mel + loss_dur + loss_kl
+    # 训练生成器
     optim_g.zero_grad()
     scaler.scale(loss_gen_all).backward()
     scaler.unscale_(optim_g)
     grad_norm_g = commons.clip_grad_value_(net_g.parameters(), None)
     scaler.step(optim_g)
     scaler.update()
+
+    # 训练代码到这里结束
+    # 只看到了GAN，其他的模块呢？
 
     if rank==0:
       if global_step % hps.train.log_interval == 0:
