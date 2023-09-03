@@ -457,14 +457,16 @@ class SynthesizerTrn(nn.Module):
       self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
   def forward(self, x, x_lengths, y, y_lengths, sid=None):
-
+    # 文本编码器
     x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
     if self.n_speakers > 0:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
       g = None
 
+    # 音频编码器
     z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g)
+    # flow
     z_p = self.flow(z, y_mask, g=g)
 
     with torch.no_grad():
