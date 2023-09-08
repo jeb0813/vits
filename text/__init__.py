@@ -51,4 +51,6 @@ def _clean_text(text, cleaner_names):
     if not cleaner:
       raise Exception('Unknown cleaner: %s' % name)
     text = cleaner(text)
+  # a cleaner returns phonemes
+  # see phonemes in cleaners.py
   return text

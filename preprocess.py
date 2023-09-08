@@ -14,9 +14,11 @@ if __name__ == '__main__':
 
   for filelist in args.filelists:
     print("START:", filelist)
+    # 这个函数在加载的同时完成了分割工作
     filepaths_and_text = load_filepaths_and_text(filelist)
     for i in range(len(filepaths_and_text)):
       original_text = filepaths_and_text[i][args.text_index]
+      # cleaner comes from tacotron
       cleaned_text = text._clean_text(original_text, args.text_cleaners)
       filepaths_and_text[i][args.text_index] = cleaned_text
 
