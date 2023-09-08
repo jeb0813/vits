@@ -44,7 +44,7 @@ def main():
 
   n_gpus = torch.cuda.device_count()
   os.environ['MASTER_ADDR'] = 'localhost'
-  os.environ['MASTER_PORT'] = '80000'
+  os.environ['MASTER_PORT'] = '8000'
 
   hps = utils.get_hparams()
   mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
@@ -63,6 +63,7 @@ def run(rank, n_gpus, hps):
   torch.manual_seed(hps.train.seed)
   torch.cuda.set_device(rank)
 
+  # 输入数据集应是*.cleaned的文本文件
   train_dataset = TextAudioLoader(hps.data.training_files, hps.data)
   train_sampler = DistributedBucketSampler(
       train_dataset,

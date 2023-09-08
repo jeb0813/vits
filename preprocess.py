@@ -17,11 +17,13 @@ if __name__ == '__main__':
     # 这个函数在加载的同时完成了分割工作
     filepaths_and_text = load_filepaths_and_text(filelist)
     for i in range(len(filepaths_and_text)):
+      # 这一步取出的是原始文本
       original_text = filepaths_and_text[i][args.text_index]
       # cleaner comes from tacotron
       cleaned_text = text._clean_text(original_text, args.text_cleaners)
       filepaths_and_text[i][args.text_index] = cleaned_text
-
+    
+    # 这里保存的是音素
     new_filelist = filelist + "." + args.out_extension
     with open(new_filelist, "w", encoding="utf-8") as f:
       f.writelines(["|".join(x) + "\n" for x in filepaths_and_text])

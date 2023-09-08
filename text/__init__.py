@@ -46,6 +46,7 @@ def sequence_to_text(sequence):
 
 
 def _clean_text(text, cleaner_names):
+  # if multiple cleaners, will it only return last cleanner?
   for name in cleaner_names:
     cleaner = getattr(cleaners, name)
     if not cleaner:
