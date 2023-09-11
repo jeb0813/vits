@@ -130,8 +130,10 @@ def plot_alignment_to_numpy(alignment, info=None):
   return data
 
 
-def load_wav_to_torch(full_path):
+def load_wav_to_torch(full_path, reverse=False):
   sampling_rate, data = read(full_path)
+  if reverse is True:
+    data=data[::-1]
   return torch.FloatTensor(data.astype(np.float32)), sampling_rate
 
 

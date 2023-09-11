@@ -398,38 +398,15 @@ class ReverseTextAudioLoader(TextAudioLoader):
         super(ReverseTextAudioLoader,self).__init__(audiopaths_and_text, hparams)
     
 
-    # def _filter(self):
-    #     """
-    #     Filter text & store spec lengths
-    #     """
-    #     # Store spectrogram lengths for Bucketing
-    #     # wav_length ~= file_size / (wav_channels * Bytes per dim) = file_size / (1 * 2)
-    #     # spec_length = wav_length // hop_length
-
-    #     audiopaths_and_text_new = []
-    #     lengths = []
-    #     for audiopath, text in self.audiopaths_and_text:
-    #         if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
-    #             audiopaths_and_text_new.append([audiopath, text])
-    #             lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
-    #     self.audiopaths_and_text = audiopaths_and_text_new
-    #     self.lengths = lengths
-
-    # def get_audio_text_pair(self, audiopath_and_text):
-    #     # separate filename and text
-    #     audiopath, text = audiopath_and_text[0], audiopath_and_text[1]
-    #     text = self.get_text(text)
-    #     spec, wav = self.get_audio(audiopath)
-    #     return (text, spec, wav)
-
+    # 这里是对音频的预处理
     def get_audio(self, filename):
-        audio, sampling_rate = load_wav_to_torch(filename)
+        audio, sampling_rate = load_wav_to_torch(filename,reverse=True)
         if sampling_rate != self.sampling_rate:
             raise ValueError("{} {} SR doesn't match target {} SR".format(
                 sampling_rate, self.sampling_rate))
         audio_norm = audio / self.max_wav_value
         audio_norm = audio_norm.unsqueeze(0)
-        spec_filename = filename.replace(".wav", ".spec.pt")
+        spec_filename = filename.replace(".wav", "_reverse.spec.pt")
         if os.path.exists(spec_filename):
             spec = torch.load(spec_filename)
         else:
@@ -439,23 +416,3 @@ class ReverseTextAudioLoader(TextAudioLoader):
             spec = torch.squeeze(spec, 0)
             torch.save(spec, spec_filename)
         return spec, audio_norm
-
-    def get_text(self, text):
-        # 如果文本没有clean，那么进行处理
-        # 然后转为seq
-        # 区别就是什么时候调用text._clean_text()
-        # 这个地方应该对返回的text顺序进行调整
-        if self.cleaned_text:
-            text_norm = cleaned_text_to_sequence(text)
-        else:
-            text_norm = text_to_sequence(text, self.text_cleaners)
-        if self.add_blank:
-            text_norm = commons.intersperse(text_norm, 0)
-        text_norm = torch.LongTensor(text_norm)
-        return text_norm
-
-    # def __getitem__(self, index):
-    #     return self.get_audio_text_pair(self.audiopaths_and_text[index])
-
-    # def __len__(self):
-    #     return len(self.audiopaths_and_text)
