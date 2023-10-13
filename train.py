@@ -42,12 +42,17 @@ def main():
   """Assume Single Node Multi GPUs Training Only"""
   assert torch.cuda.is_available(), "CPU training is not allowed."
 
+  # should change to gpu:3
   n_gpus = torch.cuda.device_count()
+  # what's this for?
   os.environ['MASTER_ADDR'] = 'localhost'
-  os.environ['MASTER_PORT'] = '8000'
+  os.environ['MASTER_PORT'] = '1145'
 
   hps = utils.get_hparams()
+
+  # 多卡训练
   mp.spawn(run, nprocs=n_gpus, args=(n_gpus, hps,))
+
 
 
 def run(rank, n_gpus, hps):
@@ -74,11 +79,11 @@ def run(rank, n_gpus, hps):
       shuffle=True)
   # 这个参数用于实现自定义的batch输出
   collate_fn = TextAudioCollate()
-  train_loader = DataLoader(train_dataset, num_workers=8, shuffle=False, pin_memory=True,
+  train_loader = DataLoader(train_dataset, num_workers=4, shuffle=False, pin_memory=True,
       collate_fn=collate_fn, batch_sampler=train_sampler)
   if rank == 0:
     eval_dataset = TextAudioLoader(hps.data.validation_files, hps.data)
-    eval_loader = DataLoader(eval_dataset, num_workers=8, shuffle=False,
+    eval_loader = DataLoader(eval_dataset, num_workers=4, shuffle=False,
         batch_size=hps.train.batch_size, pin_memory=True,
         drop_last=False, collate_fn=collate_fn)
 

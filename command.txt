@@ -1,0 +1,4 @@
+CUDA_VISIBLE_DEVICES=3 python train.py -c configs/ljs_base.json -m ljs_base
+CUDA_VISIBLE_DEVICES=3 nohup python -u train.py -c configs/ljs_base.json -m ljs_base >> python.log 2>&1 &
+watch --color -n1 gpustat -cpu
+pid 36647

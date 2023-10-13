@@ -58,16 +58,18 @@ def _clean_text(text, cleaner_names):
   return text
 
 
-__author__ = "Chen Ziang"
+# for bert-vits 
 
-from text import english
-# support english only
-language_module_map = {"EN":english}
+# __author__ = "Chen Ziang"
 
-def clean_text(text, language):
-  language_module = language_module_map[language]
-  # 对文本内容进行了规范化
-  norm_text = language_module.text_normalize(text)
-  # 音素、音调、每个字对应的音素数量
-  phones, tones, word2ph = language_module.g2p(norm_text)
-  return norm_text, phones, tones, word2ph
+# from text import english
+# # support english only
+# language_module_map = {"EN":english}
+
+# def clean_text(text, language):
+#   language_module = language_module_map[language]
+#   # 对文本内容进行了规范化
+#   norm_text = language_module.text_normalize(text)
+#   # 音素、音调、每个字对应的音素数量
+#   phones, tones, word2ph = language_module.g2p(norm_text)
+#   return norm_text, phones, tones, word2ph
