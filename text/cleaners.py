@@ -96,6 +96,7 @@ def english_cleaners2(text):
   text = lowercase(text)
   text = expand_abbreviations(text)
   # using espeak by default
-  phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  # phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
+  phonemes = phonemize(text, words_mismatch='ignore',language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
   phonemes = collapse_whitespace(phonemes)
   return phonemes

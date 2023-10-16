@@ -1,4 +1,6 @@
 CUDA_VISIBLE_DEVICES=3 python train.py -c configs/ljs_base.json -m ljs_base
 CUDA_VISIBLE_DEVICES=3 nohup python -u train.py -c configs/ljs_base.json -m ljs_base >> python.log 2>&1 &
 watch --color -n1 gpustat -cpu
+python preprocess.py --text_index 1 --filelists filelists/ljs_audio_text_val_filelist.txt filelists/ljs_audio_text_test_filelist.txt  --reverse True
+python preprocess.py --text_index 1 --filelists filelists/test.txt  --reverse True
 pid 36647

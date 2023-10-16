@@ -400,12 +400,14 @@ class ReverseTextAudioLoader(TextAudioLoader):
 
     # 这里是对音频的预处理
     def get_audio(self, filename):
+        # 音频加载时完成了倒放
         audio, sampling_rate = load_wav_to_torch(filename,reverse=True)
         if sampling_rate != self.sampling_rate:
             raise ValueError("{} {} SR doesn't match target {} SR".format(
                 sampling_rate, self.sampling_rate))
         audio_norm = audio / self.max_wav_value
         audio_norm = audio_norm.unsqueeze(0)
+        # 重新生成mel谱
         spec_filename = filename.replace(".wav", "_reverse.spec.pt")
         if os.path.exists(spec_filename):
             spec = torch.load(spec_filename)

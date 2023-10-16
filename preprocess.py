@@ -13,7 +13,6 @@ if __name__ == '__main__':
 
   args = parser.parse_args()
     
-
   for filelist in args.filelists:
     print("START:", filelist)
     # 这个函数在加载的同时完成了分割工作
@@ -24,7 +23,7 @@ if __name__ == '__main__':
       # cleaner comes from tacotron
       cleaned_text = text._clean_text(original_text, args.text_cleaners)
       if args.reverse is True:
-        cleaned_text=reversed(cleaned_text)
+        cleaned_text=cleaned_text[::-1]
       filepaths_and_text[i][args.text_index] = cleaned_text
     
     # 这里保存的是音素
