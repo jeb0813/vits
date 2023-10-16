@@ -1,0 +1,61 @@
+nohup: ignoring input
+INFO:ljs_base_reverse:{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 1234, 'epochs': 20000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 48, 'fp16_run': True, 'lr_decay': 0.999875, 'segment_size': 8192, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0}, 'data': {'training_files': 'filelists/ljs_audio_text_train_filelist_reverse.txt.cleaned', 'validation_files': 'filelists/ljs_audio_text_val_filelist_reverse.txt.cleaned', 'text_cleaners': ['english_cleaners2'], 'max_wav_value': 32768.0, 'sampling_rate': 22050, 'filter_length': 1024, 'hop_length': 256, 'win_length': 1024, 'n_mel_channels': 80, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 0, 'cleaned_text': True}, 'model': {'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 4, 4], 'n_layers_q': 3, 'use_spectral_norm': False}, 'model_dir': './logs/ljs_base_reverse'}
+INFO:torch.distributed.distributed_c10d:Added key: store_based_barrier_key:1 to store for rank: 0
+INFO:torch.distributed.distributed_c10d:Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+INFO:torch.nn.parallel.distributed:Reducer buckets have been rebuilt in this iteration.
+INFO:ljs_base_reverse:Train Epoch: 1 [0%]
+INFO:ljs_base_reverse:[6.084160327911377, 6.083932399749756, 0.3134159743785858, 91.767822265625, 1.6619600057601929, 150.03126525878906, 0, 0.0002]
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: ComplexHalf support is experimental and many operators don't support it yet. (Triggered internally at ../aten/src/ATen/EmptyTensor.cpp:31.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/autograd/__init__.py:199: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1, 9, 96], strides() = [25824, 96, 1]
+bucket_view.sizes() = [1, 9, 96], strides() = [864, 96, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:325.)
+  allow_unreachable=True, accumulate_grad=True)  # Calls into the C++ engine to run the backward pass
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+terminate called without an active exception
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 1 to ./logs/ljs_base_reverse/G_0.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 1 to ./logs/ljs_base_reverse/D_0.pth
+INFO:torch.nn.parallel.distributed:Reducer buckets have been rebuilt in this iteration.
+INFO:ljs_base_reverse:Train Epoch: 1 [76%]
+INFO:ljs_base_reverse:[2.11519455909729, 2.5678815841674805, 4.167735576629639, 36.894283294677734, 1.7067546844482422, 1.8821711540222168, 200, 0.0002]
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/functional.py:633: UserWarning: stft will soon require the return_complex parameter be given for real inputs, and will further require that return_complex=True in a future PyTorch release. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:801.)
+  normalized, onesided, return_complex)
+INFO:ljs_base_reverse:====> Epoch: 1
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f33fd892830>
+Traceback (most recent call last):
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/process.py", line 140, in join
+    res = self._popen.wait(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/popen_fork.py", line 45, in wait
+    if not wait([self.sentinel], timeout):
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/connection.py", line 921, in wait
+    ready = selector.select(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 73540) is killed by signal: Aborted. 
