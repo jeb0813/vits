@@ -1492,3 +1492,179 @@ INFO:ljs_base_reverse:[2.502483367919922, 2.399959087371826, 5.096378803253174, 
 INFO:ljs_base_reverse:====> Epoch: 253
 INFO:ljs_base_reverse:Train Epoch: 254 [3%]
 INFO:ljs_base_reverse:[2.696171522140503, 2.2091989517211914, 4.760778427124023, 19.839210510253906, 1.4614142179489136, 1.932310938835144, 66800, 0.0001937735849929196]
+INFO:ljs_base_reverse:Train Epoch: 254 [79%]
+INFO:ljs_base_reverse:[2.5453667640686035, 2.3432228565216064, 5.023065090179443, 19.7677001953125, 1.4731086492538452, 1.981289029121399, 67000, 0.0001937735849929196]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 254 to ./logs/ljs_base_reverse/G_67000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 254 to ./logs/ljs_base_reverse/D_67000.pth
+INFO:ljs_base_reverse:====> Epoch: 254
+INFO:ljs_base_reverse:Train Epoch: 255 [55%]
+INFO:ljs_base_reverse:[2.4506468772888184, 2.1991958618164062, 4.794644355773926, 19.602243423461914, 1.4894378185272217, 1.9980428218841553, 67200, 0.00019374936329479546]
+INFO:ljs_base_reverse:====> Epoch: 255
+INFO:ljs_base_reverse:Train Epoch: 256 [30%]
+INFO:ljs_base_reverse:[2.5833585262298584, 2.13983154296875, 4.798992156982422, 19.84432029724121, 1.4840142726898193, 2.0400326251983643, 67400, 0.0001937251446243836]
+INFO:ljs_base_reverse:====> Epoch: 256
+INFO:ljs_base_reverse:Train Epoch: 257 [6%]
+INFO:ljs_base_reverse:[2.602695941925049, 2.066108465194702, 4.722675800323486, 19.974416732788086, 1.473283052444458, 2.0116777420043945, 67600, 0.00019370092898130556]
+INFO:ljs_base_reverse:Train Epoch: 257 [82%]
+INFO:ljs_base_reverse:[2.6293606758117676, 1.9847002029418945, 4.530778408050537, 19.723644256591797, 1.4659172296524048, 2.075040340423584, 67800, 0.00019370092898130556]
+INFO:ljs_base_reverse:====> Epoch: 257
+INFO:ljs_base_reverse:Train Epoch: 258 [58%]
+INFO:ljs_base_reverse:[2.4973976612091064, 2.3858394622802734, 5.318460464477539, 19.869020462036133, 1.4823861122131348, 2.138807773590088, 68000, 0.00019367671636518288]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 258 to ./logs/ljs_base_reverse/G_68000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 258 to ./logs/ljs_base_reverse/D_68000.pth
+INFO:ljs_base_reverse:====> Epoch: 258
+INFO:ljs_base_reverse:Train Epoch: 259 [33%]
+INFO:ljs_base_reverse:[2.5549404621124268, 2.3446359634399414, 5.226312637329102, 20.002559661865234, 1.4610979557037354, 2.0768518447875977, 68200, 0.0001936525067756372]
+INFO:ljs_base_reverse:====> Epoch: 259
+INFO:ljs_base_reverse:Train Epoch: 260 [9%]
+INFO:ljs_base_reverse:[2.5713629722595215, 2.3075575828552246, 4.917734622955322, 19.85869598388672, 1.439408779144287, 1.9776531457901, 68400, 0.00019362830021229025]
+INFO:ljs_base_reverse:Train Epoch: 260 [85%]
+INFO:ljs_base_reverse:[2.6567914485931396, 1.9452377557754517, 4.75278377532959, 19.933670043945312, 1.4732623100280762, 2.0576634407043457, 68600, 0.00019362830021229025]
+INFO:ljs_base_reverse:====> Epoch: 260
+INFO:ljs_base_reverse:Train Epoch: 261 [61%]
+INFO:ljs_base_reverse:[2.4063048362731934, 2.4275355339050293, 5.42939567565918, 19.84516143798828, 1.477468490600586, 2.0973336696624756, 68800, 0.0001936040966747637]
+INFO:ljs_base_reverse:====> Epoch: 261
+INFO:ljs_base_reverse:Train Epoch: 262 [36%]
+INFO:ljs_base_reverse:[2.4057765007019043, 2.413013458251953, 5.100560188293457, 19.660181045532227, 1.4722685813903809, 1.9695420265197754, 69000, 0.00019357989616267934]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 262 to ./logs/ljs_base_reverse/G_69000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 262 to ./logs/ljs_base_reverse/D_69000.pth
+INFO:ljs_base_reverse:====> Epoch: 262
+INFO:ljs_base_reverse:Train Epoch: 263 [12%]
+INFO:ljs_base_reverse:[2.628720760345459, 2.1498563289642334, 4.628126621246338, 19.62616539001465, 1.4689531326293945, 1.9183173179626465, 69200, 0.000193555698675659]
+INFO:ljs_base_reverse:Train Epoch: 263 [88%]
+INFO:ljs_base_reverse:[2.55128812789917, 2.333202362060547, 4.608359336853027, 19.309139251708984, 1.4924060106277466, 2.0017755031585693, 69400, 0.000193555698675659]
+INFO:ljs_base_reverse:====> Epoch: 263
+INFO:ljs_base_reverse:Train Epoch: 264 [64%]
+INFO:ljs_base_reverse:[2.4373791217803955, 2.401653528213501, 4.978989124298096, 19.50554847717285, 1.480202317237854, 1.9587417840957642, 69600, 0.00019353150421332454]
+INFO:ljs_base_reverse:====> Epoch: 264
+INFO:ljs_base_reverse:Train Epoch: 265 [39%]
+INFO:ljs_base_reverse:[2.612006664276123, 2.092514753341675, 4.6067023277282715, 19.310930252075195, 1.4933711290359497, 1.9925975799560547, 69800, 0.00019350731277529787]
+INFO:ljs_base_reverse:====> Epoch: 265
+INFO:ljs_base_reverse:Train Epoch: 266 [15%]
+INFO:ljs_base_reverse:[2.760028123855591, 1.911797046661377, 4.769811153411865, 19.323768615722656, 1.481967568397522, 1.9290366172790527, 70000, 0.00019348312436120093]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 266 to ./logs/ljs_base_reverse/G_70000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 266 to ./logs/ljs_base_reverse/D_70000.pth
+INFO:ljs_base_reverse:Train Epoch: 266 [91%]
+INFO:ljs_base_reverse:[2.415864944458008, 2.4763214588165283, 5.428544521331787, 19.84297752380371, 1.4682618379592896, 2.0531370639801025, 70200, 0.00019348312436120093]
+INFO:ljs_base_reverse:====> Epoch: 266
+INFO:ljs_base_reverse:Train Epoch: 267 [67%]
+INFO:ljs_base_reverse:[2.424931526184082, 2.368886709213257, 5.207413673400879, 19.869489669799805, 1.4564406871795654, 2.00958514213562, 70400, 0.0001934589389706558]
+INFO:ljs_base_reverse:====> Epoch: 267
+INFO:ljs_base_reverse:Train Epoch: 268 [42%]
+INFO:ljs_base_reverse:[2.5944316387176514, 2.1098530292510986, 4.638797283172607, 19.813695907592773, 1.493443250656128, 2.1737070083618164, 70600, 0.00019343475660328445]
+INFO:ljs_base_reverse:====> Epoch: 268
+INFO:ljs_base_reverse:Train Epoch: 269 [18%]
+INFO:ljs_base_reverse:[2.4788575172424316, 2.3402552604675293, 5.3717427253723145, 19.94050407409668, 1.4968771934509277, 2.0432777404785156, 70800, 0.00019341057725870902]
+INFO:ljs_base_reverse:Train Epoch: 269 [94%]
+INFO:ljs_base_reverse:[2.5239784717559814, 2.1925132274627686, 4.931258678436279, 19.782617568969727, 1.4772865772247314, 2.105604410171509, 71000, 0.00019341057725870902]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 269 to ./logs/ljs_base_reverse/G_71000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 269 to ./logs/ljs_base_reverse/D_71000.pth
+INFO:ljs_base_reverse:====> Epoch: 269
+INFO:ljs_base_reverse:Train Epoch: 270 [70%]
+INFO:ljs_base_reverse:[2.619025945663452, 2.072730541229248, 4.397873401641846, 19.42257308959961, 1.4624228477478027, 1.9777342081069946, 71200, 0.00019338640093655168]
+INFO:ljs_base_reverse:====> Epoch: 270
+INFO:ljs_base_reverse:Train Epoch: 271 [45%]
+INFO:ljs_base_reverse:[2.4912617206573486, 2.203740358352661, 5.144445419311523, 19.788145065307617, 1.4827088117599487, 2.064162254333496, 71400, 0.00019336222763643461]
+INFO:ljs_base_reverse:====> Epoch: 271
+INFO:ljs_base_reverse:Train Epoch: 272 [21%]
+INFO:ljs_base_reverse:[2.51983642578125, 2.3868675231933594, 4.907973289489746, 19.322778701782227, 1.4838318824768066, 2.031283378601074, 71600, 0.00019333805735798006]
+INFO:ljs_base_reverse:Train Epoch: 272 [97%]
+INFO:ljs_base_reverse:[2.5278525352478027, 2.341322422027588, 5.122493743896484, 19.95270347595215, 1.437859296798706, 2.0271143913269043, 71800, 0.00019333805735798006]
+INFO:ljs_base_reverse:====> Epoch: 272
+INFO:ljs_base_reverse:Train Epoch: 273 [73%]
+INFO:ljs_base_reverse:[2.485015869140625, 2.3096957206726074, 5.670646667480469, 20.50259780883789, 1.4710469245910645, 2.00384259223938, 72000, 0.0001933138901008103]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 273 to ./logs/ljs_base_reverse/G_72000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 273 to ./logs/ljs_base_reverse/D_72000.pth
+INFO:ljs_base_reverse:====> Epoch: 273
+INFO:ljs_base_reverse:Train Epoch: 274 [48%]
+INFO:ljs_base_reverse:[2.5834946632385254, 2.225043773651123, 5.215453624725342, 20.29990577697754, 1.4585716724395752, 1.7341924905776978, 72200, 0.0001932897258645477]
+INFO:ljs_base_reverse:====> Epoch: 274
+INFO:ljs_base_reverse:Train Epoch: 275 [24%]
+INFO:ljs_base_reverse:[2.517483711242676, 2.213393449783325, 5.005197525024414, 20.075458526611328, 1.4591937065124512, 2.0360453128814697, 72400, 0.00019326556464881463]
+INFO:ljs_base_reverse:====> Epoch: 275
+INFO:ljs_base_reverse:Train Epoch: 276 [0%]
+INFO:ljs_base_reverse:[2.584115982055664, 2.1537370681762695, 5.07369327545166, 19.694801330566406, 1.456921935081482, 1.9947295188903809, 72600, 0.0001932414064532335]
+INFO:ljs_base_reverse:Train Epoch: 276 [76%]
+INFO:ljs_base_reverse:[2.4932057857513428, 2.315156936645508, 5.239368915557861, 19.720600128173828, 1.4397308826446533, 2.0408618450164795, 72800, 0.0001932414064532335]
+INFO:ljs_base_reverse:====> Epoch: 276
+INFO:ljs_base_reverse:Train Epoch: 277 [52%]
+INFO:ljs_base_reverse:[2.6365156173706055, 2.2350142002105713, 4.725457668304443, 19.35502052307129, 1.4825732707977295, 2.084645986557007, 73000, 0.00019321725127742685]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 277 to ./logs/ljs_base_reverse/G_73000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 277 to ./logs/ljs_base_reverse/D_73000.pth
+INFO:ljs_base_reverse:====> Epoch: 277
+INFO:ljs_base_reverse:Train Epoch: 278 [27%]
+INFO:ljs_base_reverse:[2.4756016731262207, 2.1678311824798584, 5.152661323547363, 19.833444595336914, 1.473481297492981, 2.0113885402679443, 73200, 0.00019319309912101717]
+INFO:ljs_base_reverse:====> Epoch: 278
+INFO:ljs_base_reverse:Train Epoch: 279 [3%]
+INFO:ljs_base_reverse:[2.6569766998291016, 2.417400360107422, 5.237920761108398, 19.593454360961914, 1.4952545166015625, 2.0062642097473145, 73400, 0.00019316894998362705]
+INFO:ljs_base_reverse:Train Epoch: 279 [79%]
+INFO:ljs_base_reverse:[2.476229667663574, 2.240461826324463, 4.989635467529297, 19.65727424621582, 1.4579473733901978, 1.9917396306991577, 73600, 0.00019316894998362705]
+INFO:ljs_base_reverse:====> Epoch: 279
+INFO:ljs_base_reverse:Train Epoch: 280 [55%]
+INFO:ljs_base_reverse:[2.4934985637664795, 2.1866939067840576, 5.2050700187683105, 19.673070907592773, 1.4542882442474365, 1.9914501905441284, 73800, 0.0001931448038648791]
+INFO:ljs_base_reverse:====> Epoch: 280
+INFO:ljs_base_reverse:Train Epoch: 281 [30%]
+INFO:ljs_base_reverse:[2.4724197387695312, 2.2851827144622803, 4.718402862548828, 18.661865234375, 1.4697424173355103, 2.1324899196624756, 74000, 0.00019312066076439597]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 281 to ./logs/ljs_base_reverse/G_74000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 281 to ./logs/ljs_base_reverse/D_74000.pth
+INFO:ljs_base_reverse:====> Epoch: 281
+INFO:ljs_base_reverse:Train Epoch: 282 [6%]
+INFO:ljs_base_reverse:[2.4751391410827637, 2.4153292179107666, 5.483274459838867, 19.992380142211914, 1.4430094957351685, 1.9922367334365845, 74200, 0.0001930965206818004]
+INFO:ljs_base_reverse:Train Epoch: 282 [82%]
+INFO:ljs_base_reverse:[2.573333263397217, 2.0726990699768066, 5.075485706329346, 19.637184143066406, 1.4487882852554321, 1.7323709726333618, 74400, 0.0001930965206818004]
+INFO:ljs_base_reverse:====> Epoch: 282
+INFO:ljs_base_reverse:Train Epoch: 283 [58%]
+INFO:ljs_base_reverse:[2.544308662414551, 2.201878786087036, 5.007513046264648, 19.858165740966797, 1.5013854503631592, 2.0979247093200684, 74600, 0.00019307238361671516]
+INFO:ljs_base_reverse:====> Epoch: 283
+INFO:ljs_base_reverse:Train Epoch: 284 [33%]
+INFO:ljs_base_reverse:[2.521148204803467, 2.115387201309204, 5.176334381103516, 19.93167495727539, 1.479053020477295, 1.8994935750961304, 74800, 0.00019304824956876306]
+INFO:ljs_base_reverse:====> Epoch: 284
+INFO:ljs_base_reverse:Train Epoch: 285 [9%]
+INFO:ljs_base_reverse:[2.611966848373413, 2.249342918395996, 4.6346611976623535, 19.39815902709961, 1.4832754135131836, 2.011809825897217, 75000, 0.00019302411853756697]
+terminate called without an active exception
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 285 to ./logs/ljs_base_reverse/G_75000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 285 to ./logs/ljs_base_reverse/D_75000.pth
+INFO:ljs_base_reverse:Train Epoch: 285 [85%]
+INFO:ljs_base_reverse:[2.5303328037261963, 2.364173173904419, 5.267830848693848, 19.505966186523438, 1.4798038005828857, 2.055849552154541, 75200, 0.00019302411853756697]
+INFO:ljs_base_reverse:====> Epoch: 285
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f33fd892830>
+Traceback (most recent call last):
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/process.py", line 140, in join
+    res = self._popen.wait(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/popen_fork.py", line 45, in wait
+    if not wait([self.sentinel], timeout):
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/connection.py", line 921, in wait
+    ready = selector.select(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 52722) is killed by signal: Aborted. 
+INFO:ljs_base_reverse:Train Epoch: 286 [61%]
+INFO:ljs_base_reverse:[2.574820041656494, 2.2545740604400635, 4.520167827606201, 19.68150520324707, 1.459439754486084, 2.019303321838379, 75400, 0.00019299999052274977]
+INFO:ljs_base_reverse:====> Epoch: 286
+INFO:ljs_base_reverse:Train Epoch: 287 [36%]
+INFO:ljs_base_reverse:[2.5977301597595215, 2.399540662765503, 5.039881229400635, 20.145526885986328, 1.4720375537872314, 2.0805647373199463, 75600, 0.0001929758655239344]
+INFO:ljs_base_reverse:====> Epoch: 287
+INFO:ljs_base_reverse:Train Epoch: 288 [12%]
+INFO:ljs_base_reverse:[2.514786958694458, 2.1322357654571533, 5.348272800445557, 20.226388931274414, 1.4485325813293457, 1.8114500045776367, 75800, 0.0001929517435407439]
+INFO:ljs_base_reverse:Train Epoch: 288 [88%]
+INFO:ljs_base_reverse:[2.408435583114624, 2.5864086151123047, 5.7220282554626465, 20.237201690673828, 1.4756821393966675, 2.057804584503174, 76000, 0.0001929517435407439]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 288 to ./logs/ljs_base_reverse/G_76000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 288 to ./logs/ljs_base_reverse/D_76000.pth
+INFO:ljs_base_reverse:====> Epoch: 288
+INFO:ljs_base_reverse:Train Epoch: 289 [64%]
+INFO:ljs_base_reverse:[2.5722827911376953, 2.229724884033203, 4.97133731842041, 19.777009963989258, 1.4841325283050537, 2.1795854568481445, 76200, 0.00019292762457280132]
+INFO:ljs_base_reverse:====> Epoch: 289
+INFO:ljs_base_reverse:Train Epoch: 290 [39%]
+INFO:ljs_base_reverse:[2.5070571899414062, 2.129985809326172, 4.691995620727539, 19.163150787353516, 1.4939863681793213, 1.9683747291564941, 76400, 0.0001929035086197297]
+INFO:ljs_base_reverse:====> Epoch: 290
+INFO:ljs_base_reverse:Train Epoch: 291 [15%]
+INFO:ljs_base_reverse:[2.621769428253174, 2.1249186992645264, 4.962514877319336, 19.908281326293945, 1.4748425483703613, 2.021838903427124, 76600, 0.00019287939568115225]
+INFO:ljs_base_reverse:Train Epoch: 291 [91%]
+INFO:ljs_base_reverse:[2.460775375366211, 2.505319595336914, 5.684662342071533, 19.72976303100586, 1.4983632564544678, 1.9258630275726318, 76800, 0.00019287939568115225]
+INFO:ljs_base_reverse:====> Epoch: 291

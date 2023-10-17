@@ -10,4 +10,5 @@ build
 *.c
 monotonic_align/monotonic_align
 
-python.log
+*.log
+*.wav

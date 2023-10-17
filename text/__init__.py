@@ -16,12 +16,15 @@ def text_to_sequence(text, cleaner_names):
     Returns:
       List of integers corresponding to the symbols in the text
   '''
-  sequence = []
 
   clean_text = _clean_text(text, cleaner_names)
-  for symbol in clean_text:
-    symbol_id = _symbol_to_id[symbol]
-    sequence += [symbol_id]
+  print(clean_text)
+  sequence = [_symbol_to_id[symbol] for symbol in clean_text]
+  print(sequence)
+  # sequence = []
+  # for symbol in clean_text:
+  #   symbol_id = _symbol_to_id[symbol]
+  #   sequence += [symbol_id]
   return sequence
 
 

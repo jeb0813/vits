@@ -50,18 +50,9 @@ class VITSInferer():
             x_text = norm_text.cuda().unsqueeze(0)
             x_text_lengths = torch.LongTensor([x_text.size(0)]).cuda()
             audio = self.net.infer(x_text, x_text_lengths, noise_scale=.667, noise_scale_w=0.8, length_scale=1)[0][0,0].data.cpu().float().numpy()
-            output_file = output_path
-            write(output_file, 22050, audio)
+            # 采样率要注意
+            write(output_path, 22050, audio)
 
-
-
-# with torch.no_grad():
-#     x_tst = stn_tst.cuda().unsqueeze(0)
-#     x_tst_lengths = torch.LongTensor([stn_tst.size(0)]).cuda()
-#     audio = net_g.infer(x_tst, x_tst_lengths, noise_scale=.667, noise_scale_w=0.8, length_scale=1)[0][0,0].data.cpu().float().numpy()
-#     output_file = "./output.wav"
-#     write(output_file, 22050, audio)
-# ipd.display(ipd.Audio(audio, rate=hps.data.sampling_rate, normalize=False))
 
 if __name__=="__main__":
     hparam_path="./configs/ljs_base.json"
