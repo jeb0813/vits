@@ -4,4 +4,6 @@ CUDA_VISIBLE_DEVICES=3 nohup python -u train_reverse.py -c configs/ljs_base_reve
 watch --color -n1 gpustat -cpu
 python preprocess.py --text_index 1 --filelists filelists/ljs_audio_text_val_filelist.txt filelists/ljs_audio_text_test_filelist.txt  --reverse True
 python preprocess.py --text_index 1 --filelists filelists/test.txt  --reverse True
-pid 36647
+
+
+CUDA_VISIBLE_DEVICES=2 python inference.py

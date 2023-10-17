@@ -1137,3 +1137,59 @@ INFO:ljs_base_reverse:Train Epoch: 190 [39%]
 INFO:ljs_base_reverse:[2.6010093688964844, 2.402085065841675, 4.811724662780762, 20.430301666259766, 1.4946019649505615, 2.060807943344116, 50000, 0.00019533008866921223]
 INFO:ljs_base_reverse:Saving model and optimizer state at iteration 190 to ./logs/ljs_base_reverse/G_50000.pth
 INFO:ljs_base_reverse:Saving model and optimizer state at iteration 190 to ./logs/ljs_base_reverse/D_50000.pth
+INFO:ljs_base_reverse:====> Epoch: 190
+INFO:ljs_base_reverse:Train Epoch: 191 [15%]
+INFO:ljs_base_reverse:[2.673915386199951, 2.1191904544830322, 4.645777225494385, 19.991554260253906, 1.4985677003860474, 2.035719394683838, 50200, 0.00019530567240812858]
+INFO:ljs_base_reverse:Train Epoch: 191 [91%]
+INFO:ljs_base_reverse:[2.6699204444885254, 2.0627613067626953, 4.421407699584961, 20.50325584411621, 1.4695146083831787, 2.0019540786743164, 50400, 0.00019530567240812858]
+INFO:ljs_base_reverse:====> Epoch: 191
+INFO:ljs_base_reverse:Train Epoch: 192 [67%]
+INFO:ljs_base_reverse:[2.608053207397461, 2.119123935699463, 4.420725345611572, 19.92068862915039, 1.472775936126709, 1.9850071668624878, 50600, 0.00019528125919907757]
+INFO:ljs_base_reverse:====> Epoch: 192
+INFO:ljs_base_reverse:Train Epoch: 193 [42%]
+INFO:ljs_base_reverse:[2.6149864196777344, 2.306225299835205, 4.357654571533203, 20.1911563873291, 1.5038130283355713, 1.9795743227005005, 50800, 0.00019525684904167766]
+INFO:ljs_base_reverse:====> Epoch: 193
+INFO:ljs_base_reverse:Train Epoch: 194 [18%]
+INFO:ljs_base_reverse:[2.5193560123443604, 2.3824501037597656, 5.3237104415893555, 20.538005828857422, 1.4790278673171997, 1.9839333295822144, 51000, 0.00019523244193554745]
+terminate called without an active exception
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 194 to ./logs/ljs_base_reverse/G_51000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 194 to ./logs/ljs_base_reverse/D_51000.pth
+INFO:ljs_base_reverse:Train Epoch: 194 [94%]
+INFO:ljs_base_reverse:[2.601977825164795, 2.2280001640319824, 5.0616044998168945, 20.257978439331055, 1.4717755317687988, 2.0964345932006836, 51200, 0.00019523244193554745]
+INFO:ljs_base_reverse:====> Epoch: 194
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f33fd892830>
+Traceback (most recent call last):
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/process.py", line 140, in join
+    res = self._popen.wait(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/popen_fork.py", line 45, in wait
+    if not wait([self.sentinel], timeout):
+  File "/data3/chenziang/envs/vits/lib/python3.7/multiprocessing/connection.py", line 921, in wait
+    ready = selector.select(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/data3/chenziang/envs/vits/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 63413) is killed by signal: Aborted. 
+INFO:ljs_base_reverse:Train Epoch: 195 [70%]
+INFO:ljs_base_reverse:[2.654834508895874, 2.2134225368499756, 4.502094268798828, 19.815114974975586, 1.48268723487854, 2.0506060123443604, 51400, 0.0001952080378803055]
+INFO:ljs_base_reverse:====> Epoch: 195
+INFO:ljs_base_reverse:Train Epoch: 196 [45%]
+INFO:ljs_base_reverse:[2.5330677032470703, 2.1207194328308105, 4.875052452087402, 20.06846809387207, 1.523215413093567, 2.1146481037139893, 51600, 0.00019518363687557043]
+INFO:ljs_base_reverse:====> Epoch: 196
+INFO:ljs_base_reverse:Train Epoch: 197 [21%]
+INFO:ljs_base_reverse:[2.5617411136627197, 2.2553393840789795, 4.479340076446533, 20.035884857177734, 1.479414701461792, 1.987701177597046, 51800, 0.00019515923892096098]
+INFO:ljs_base_reverse:Train Epoch: 197 [97%]
+INFO:ljs_base_reverse:[2.643300771713257, 2.147833824157715, 4.277901649475098, 20.088308334350586, 1.4873285293579102, 1.9942210912704468, 52000, 0.00019515923892096098]
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 197 to ./logs/ljs_base_reverse/G_52000.pth
+INFO:ljs_base_reverse:Saving model and optimizer state at iteration 197 to ./logs/ljs_base_reverse/D_52000.pth
+INFO:ljs_base_reverse:====> Epoch: 197
+INFO:ljs_base_reverse:Train Epoch: 198 [73%]
+INFO:ljs_base_reverse:[2.6006276607513428, 2.055335283279419, 4.528073787689209, 20.25264549255371, 1.4853906631469727, 2.0435612201690674, 52200, 0.00019513484401609586]
+INFO:ljs_base_reverse:====> Epoch: 198
+INFO:ljs_base_reverse:Train Epoch: 199 [48%]
+INFO:ljs_base_reverse:[2.63555908203125, 2.209101676940918, 4.401815414428711, 19.5003604888916, 1.458042025566101, 1.9279958009719849, 52400, 0.00019511045216059385]
+INFO:ljs_base_reverse:====> Epoch: 199
