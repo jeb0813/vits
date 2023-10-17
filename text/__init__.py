@@ -18,9 +18,7 @@ def text_to_sequence(text, cleaner_names):
   '''
 
   clean_text = _clean_text(text, cleaner_names)
-  print(clean_text)
   sequence = [_symbol_to_id[symbol] for symbol in clean_text]
-  print(sequence)
   # sequence = []
   # for symbol in clean_text:
   #   symbol_id = _symbol_to_id[symbol]

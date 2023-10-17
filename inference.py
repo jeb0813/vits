@@ -48,8 +48,9 @@ class VITSInferer():
         norm_text=self.get_norm_text(text)
         with torch.no_grad():
             x_text = norm_text.cuda().unsqueeze(0)
-            x_text_lengths = torch.LongTensor([x_text.size(0)]).cuda()
+            x_text_lengths = torch.LongTensor([norm_text.size(0)]).cuda()
             audio = self.net.infer(x_text, x_text_lengths, noise_scale=.667, noise_scale_w=0.8, length_scale=1)[0][0,0].data.cpu().float().numpy()
+
             # 采样率要注意
             write(output_path, 22050, audio)
 
@@ -58,4 +59,4 @@ if __name__=="__main__":
     hparam_path="./configs/ljs_base.json"
     pth_path="./logs/ljs_base/G_320000.pth"
     g=VITSInferer(hparam_path,pth_path)
-    g.generate("VITS is Awesome!")
+    g.generate("this is a test audio.")
